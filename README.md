@@ -3,6 +3,8 @@
 This project aims to help display a list of changes and upgrade notes between versions of an application.  
 It was inspired by the [Angular Update Guide](https://update.angular.io/)
 
+Demo:  https://changelog-demo.herokuapp.com/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.  
