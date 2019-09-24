@@ -12,9 +12,9 @@ The app will automatically reload if you change any of the source files.
 
 ## Usage
 
-Fork this repository and change `assets/versions.json` to suit your project.
+Fork this repository and change `assets/changelog.json` to suit your project.
 
-`assets/versions.json` is structured as follows:
+`assets/changelog.json` is structured as follows:
 ```
 export interface VersionJson {
   name: string;
@@ -34,7 +34,7 @@ export interface Change {
 
 ## Examples
 
-A valid `assets/versions.json` looks like this:
+A valid `assets/changelog.json` looks like this:
 ```
 {
   "name": "Project X",
