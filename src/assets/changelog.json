@@ -4,6 +4,14 @@
     "1.0": {
       "changes": []
     },
+    "1.1": {
+      "changes": [
+        {
+          "type": "info",
+          "description": "Added new function `getDimensions(): {w: number, h: number}` to `SquareComponent`\n\nThis will allow you to do some pretty cool stuff!\n\nMake sure to check it out!"
+        }
+      ]
+    },
     "2.0": {
       "changes": [
         {
@@ -22,14 +30,6 @@
         {
           "type": "danger",
           "description": "Change `import 'hello'` into `import 'world'`!"
-        }
-      ]
-    },
-    "1.1": {
-      "changes": [
-        {
-          "type": "info",
-          "description": "Added new function `getDimensions(): {w: number, h: number}` to `SquareComponent`\n\nThis will allow you to do some pretty cool stuff!\n\nMake sure to check it out!"
         }
       ]
     }

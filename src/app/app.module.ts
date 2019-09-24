@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { VersionComparatorComponent } from './version-comparator/version-comparator.component';
 import { ChangeListComponent } from './change-list/change-list.component';
 import { ChangeComponent } from './change/change.component';
-import {HttpClientModule} from "@angular/common/http";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MarkdownModule} from "ngx-markdown";
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MarkdownModule} from 'ngx-markdown';
 
 @NgModule({
   declarations: [

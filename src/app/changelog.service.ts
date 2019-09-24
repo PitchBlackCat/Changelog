@@ -6,7 +6,7 @@ import {map, pluck, shareReplay} from 'rxjs/internal/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class VersionService {
+export class ChangelogService {
 
   public name$: Observable<string>;
   public json$: Observable<VersionJson>;
@@ -15,7 +15,7 @@ export class VersionService {
   public selectedVersions$: EventEmitter<SelectedVersions> = new EventEmitter<SelectedVersions>();
 
   constructor(readonly http: HttpClient) {
-    this.json$ = this.http.get<VersionJson>('assets/versions.json').pipe(shareReplay(0));
+    this.json$ = this.http.get<VersionJson>('assets/changelog.json').pipe(shareReplay(0));
     this.name$ = this.json$.pipe(map(json => json.name));
     this.changelog$ = this.json$.pipe(map(json => json.changelog));
     this.versions$ = this.changelog$.pipe(map(v => Object.keys(v).sort()));
@@ -39,6 +39,7 @@ export interface SelectedVersions {
 
 export interface Change {
   type: string;
+  title?: string;
   description: string;
 }
 

@@ -1,5 +1,5 @@
-import {EventEmitter, OnDestroy} from "@angular/core";
-import {Observable} from "rxjs";
+import {EventEmitter, OnDestroy} from '@angular/core';
+import {Observable} from 'rxjs';
 
 export abstract class Destroyable implements OnDestroy {
   private _destroy$: EventEmitter<void> = new EventEmitter<void>();
