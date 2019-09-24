@@ -1,0 +1,37 @@
+{
+  "name": "Project X",
+  "changelog": {
+    "1.0": {
+      "changes": []
+    },
+    "2.0": {
+      "changes": [
+        {
+          "type": "light",
+          "title": "Officer barbrady here!",
+          "description": "Nothing to see here, move along.."
+        }
+      ]
+    },
+    "2.1": {
+      "changes": [
+        {
+          "type": "warning",
+          "description": "We recommend you remove `rxjs-compat`"
+        },
+        {
+          "type": "danger",
+          "description": "Change `import 'hello'` into `import 'world'`!"
+        }
+      ]
+    },
+    "1.1": {
+      "changes": [
+        {
+          "type": "info",
+          "description": "Added new function `getDimensions(): {w: number, h: number}` to `SquareComponent`\n\nThis will allow you to do some pretty cool stuff!\n\nMake sure to check it out!"
+        }
+      ]
+    }
+  }
+}

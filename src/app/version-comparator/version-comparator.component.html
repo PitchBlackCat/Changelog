@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h2 class="card-title">Select the versions you wish to compare</h2>
+
+    <form class="flex" [formGroup]="form">
+      <div class="form-group flex column">
+        <label for="fv">From version</label>
+        <select id="fv" formControlName="fv">
+          <option *ngFor="let v of versions$ | async" [value]="v">{{v}}</option>
+        </select>
+      </div>
+
+      <div class="form-group flex column">
+        <label for="tv">To version</label>
+        <select id="tv" formControlName="tv">
+          <option *ngFor="let v of versions$ | async" [value]="v">{{v}}</option>
+        </select>
+      </div>
+    </form>
+
+  </div>
+</div>
