@@ -1,0 +1,14 @@
+<div class="flex">
+  <div class="form-group form-check flex column center">
+    <input type="checkbox" class="form-check-input" #check>
+  </div>
+
+  <div class="instruction alert alert-{{check.checked ? 'success' : instruction.type}}" (click)="check.click()">
+    <h4 *ngIf="instruction.title" class="alert-heading">{{instruction.title}}</h4>
+
+    <div markdown>
+      {{instruction.description}}
+    </div>
+  </div>
+
+</div>

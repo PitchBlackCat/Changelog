@@ -1,0 +1,6 @@
+<div *ngFor="let version of versionRange$ | async">
+  <h2>Version {{version}}</h2>
+  <ng-container *ngFor="let instruction of getInstructionsFor(version) | async">
+    <app-instruction [instruction]="instruction"></app-instruction>
+  </ng-container>
+</div>

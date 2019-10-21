@@ -1,34 +1,34 @@
 import {Component, OnInit} from '@angular/core';
-import {SelectedVersions, ChangelogService} from '../changelog.service';
+import {SelectedVersions, UpgradeService} from '../upgrade.service';
 import {filter, map, switchMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
 @Component({
-  selector: 'app-change-list',
-  templateUrl: './change-list.component.html',
-  styleUrls: ['./change-list.component.sass'],
-  host: { style: 'display: block'}
+  selector: 'app-list-of-instructions',
+  templateUrl: './list-of-instructions.component.html',
+  styleUrls: ['./list-of-instructions.component.sass'],
+  host: {style: 'display: block'}
 })
-export class ChangeListComponent implements OnInit {
+export class ListOfInstructionsComponent implements OnInit {
   private versionRange$: Observable<string[]>;
 
-  constructor(readonly changelogService: ChangelogService) {
+  constructor(readonly upgradeService: UpgradeService) {
   }
 
   ngOnInit() {
-    this.versionRange$ = this.changelogService.selectedVersions$
+    this.versionRange$ = this.upgradeService.selectedVersions$
       .pipe(
         filter(v => !!v.fv && !!v.tv),
         switchMap(v => this.getVersionsBetween(v))
       );
   }
 
-  public getChangesFor(version: string) {
-    return this.changelogService.getChangesFor(version);
+  public getInstructionsFor(version: string) {
+    return this.upgradeService.getInstructionsFor(version);
   }
 
   private getVersionsBetween(s: SelectedVersions): Observable<string[]> {
-    return this.changelogService.versions$.pipe(
+    return this.upgradeService.versions$.pipe(
       map(v => v.sort()),
       map(v => {
         const result = [];

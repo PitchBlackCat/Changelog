@@ -1,11 +1,11 @@
 {
   "name": "Project X",
-  "changelog": {
+  "versions": {
     "1.0": {
-      "changes": []
+      "instructions": []
     },
     "1.1": {
-      "changes": [
+      "instructions": [
         {
           "type": "info",
           "description": "Added new function `getDimensions(): {w: number, h: number}` to `SquareComponent`\n\nThis will allow you to do some pretty cool stuff!\n\nMake sure to check it out!"
@@ -13,7 +13,7 @@
       ]
     },
     "2.0": {
-      "changes": [
+      "instructions": [
         {
           "type": "light",
           "title": "Officer barbrady here!",
@@ -22,7 +22,7 @@
       ]
     },
     "2.1": {
-      "changes": [
+      "instructions": [
         {
           "type": "warning",
           "description": "We recommend you remove `rxjs-compat`"

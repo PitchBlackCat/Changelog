@@ -1,6 +1,0 @@
-<div *ngFor="let version of versionRange$ | async">
-  <h2>Version {{version}}</h2>
-  <ng-container *ngFor="let change of getChangesFor(version) | async">
-    <app-change [change]="change"></app-change>
-  </ng-container>
-</div>

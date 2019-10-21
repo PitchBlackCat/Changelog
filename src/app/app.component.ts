@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ChangelogService} from './changelog.service';
+import {UpgradeService} from './upgrade.service';
 import {Observable} from 'rxjs';
 import {Title} from '@angular/platform-browser';
 
@@ -13,7 +13,7 @@ export class AppComponent {
   private name$: Observable<string>;
 
 
-  constructor(readonly changelogService: ChangelogService, readonly titleService: Title) {
+  constructor(readonly changelogService: UpgradeService, readonly titleService: Title) {
     this.name$ = this.changelogService.name$;
 
     this.changelogService.name$.subscribe(n => this.titleService.setTitle(`${n} - Changelog`));

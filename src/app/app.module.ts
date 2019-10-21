@@ -1,21 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { VersionComparatorComponent } from './version-comparator/version-comparator.component';
-import { ChangeListComponent } from './change-list/change-list.component';
-import { ChangeComponent } from './change/change.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {VersionComparatorComponent} from './version-comparator/version-comparator.component';
+import {InstructionComponent} from './instruction/instruction.component';
 import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import {MarkdownModule} from 'ngx-markdown';
+import {ListOfInstructionsComponent} from './list-of-instructions/list-of-instructions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VersionComparatorComponent,
-    ChangeListComponent,
-    ChangeComponent,
+    ListOfInstructionsComponent,
+    InstructionComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,4 +27,4 @@ import {MarkdownModule} from 'ngx-markdown';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnDestroy, OnInit} from '@angular/core';
-import {ChangelogService} from '../changelog.service';
+import {UpgradeService} from '../upgrade.service';
 import {Observable} from 'rxjs';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {first, takeUntil} from 'rxjs/internal/operators';
@@ -15,7 +15,7 @@ export class VersionComparatorComponent implements OnInit, OnDestroy {
   readonly destroy$: EventEmitter<void> = new EventEmitter<void>();
   private form: FormGroup;
 
-  constructor(readonly changelogService: ChangelogService,
+  constructor(readonly upgradeService: UpgradeService,
               readonly fb: FormBuilder) {
   }
 
@@ -24,7 +24,7 @@ export class VersionComparatorComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.versions$ = this.changelogService.versions$;
+    this.versions$ = this.upgradeService.versions$;
     this.form = this.fb.group({
       fv: [],
       tv: []
@@ -42,7 +42,7 @@ export class VersionComparatorComponent implements OnInit, OnDestroy {
     this.form.valueChanges
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => {
-        this.changelogService.setSelected(this.form.getRawValue());
+        this.upgradeService.setSelected(this.form.getRawValue());
       });
   }
 }
